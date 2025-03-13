@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect, useState } from "react";
+
 // import { Mot } from "./components/mot.jsx";
 // bizarre car sur les autres fichiers mon chemin est sesnsible à la casse lorsqu'il manque une majuscule mais pas ici pour mon "mot.jsx"
 import { Generateur } from "./components/Generateur.jsx";
