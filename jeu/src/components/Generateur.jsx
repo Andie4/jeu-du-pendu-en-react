@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const Generateur = ({mot ,setMot}) => {
     // affichage du mot
@@ -19,23 +19,28 @@ const Generateur = ({mot ,setMot}) => {
     //création d'un iput pour chaque lettre
     for (let i = 0; i < mot.length; i++) {
         const input = document.createElement("input");
+        input.setAttribute("maxlength", "1");
+
+
 
         // input.setAttribute("length", "1");
         // input.setAttribute("size", "1");
         // document.body.appendChild(input);
 
         // console.log(mot[i]);
-    }
+    } 
 
-    
+    const contientTiret = mot.includes("-");
+
     return (
         <div>
             <h2>Le mot mystère est :</h2>
             <p>{mot}</p>
             <p>{mot.length}</p>
-            <span>
-                {mot.split("").map((lettre, index) => (
-                <input class="input" key={index} type="text"  />
+            <span className="blocMot">
+                {mot.split("").map((letter, index) => (
+                    letter === "-" ? <span key={index}>-</span> :
+                <input key={index} maxlength="X"/>
                 ))}
             </span>
         </div>
