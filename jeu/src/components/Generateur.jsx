@@ -40,7 +40,7 @@ const Generateur = ({mot ,setMot}) => {
             <span className="blocMot">
                 {mot.split("").map((letter, index) => (
                     letter === "-" ? <span key={index}>-</span> :
-                <input key={index} maxlength="X"/>
+                <input key={index} maxLength="1"/>
                 ))}
             </span>
         </div>
