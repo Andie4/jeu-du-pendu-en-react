@@ -33,45 +33,6 @@ img{
     color: #fff;
 }
 
-
-
-h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin: 1rem;
-}
-
-.blocApp{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-    padding: 1rem;
-    border: 1px solid  #23508a;
-    border-radius: 5px;
-}
-.spanMot span{
-    margin : 0.5rem;
-    font-size: 1.5rem;
-
-}
-.keyboard{
-    display: grid;
-    grid-template-columns: repeat(13, 1fr);
-    grid-gap: 1rem;
-    margin: 3rem;
-}
-
-.keyboard button{
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: #f0f0f0;
-    cursor: pointer;
-}
-
 #reload{
     font-size: 1.2rem;
     margin: 3rem;
@@ -85,4 +46,129 @@ h1 {
 #reload:hover{
     background-color:  rgb(35, 80, 138);
     color:#e6b0e6cf;
+}
+
+/* mobile */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 1.5rem;
+        margin: auto;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+    .blocApp{
+        margin: 0.5rem;
+        padding: 0.5rem;
+        display: grid;
+        justify-content: center;
+    }
+    .spanMot {
+        margin: auto;
+    }
+    .keyboard{
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-gap: 0.5rem;
+        margin: 1rem;
+    }
+    .keyboard button{
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+    #reload{
+        font-size: 1rem;
+        margin: auto;
+        width: 10rem;
+        margin-top: 3rem;
+    }
+    .spanMot span{
+        margin : 0.5rem;
+        font-size: 0.9rem;
+    
+    }
+}
+
+/* tabklet */
+@media (min-width: 768px) and  (max-width: 1024px) {   
+    h1 {
+        font-size: 1.5rem;
+        margin: auto;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+    }
+    .blocApp{
+        margin: 0.5rem;
+        padding: 0.5rem;
+        display: grid;
+        justify-content: center;
+    }
+    .spanMot {
+        display: flex;
+        justify-content: center;
+    }
+    .keyboard{
+        display: grid;
+        grid-template-columns: repeat(13, 1fr);
+        grid-gap: 0.5rem;
+        margin: 1rem;
+    }
+    .keyboard button{
+        padding: 0.5rem;
+        font-size: 0.8rem;
+    }
+    #reload{
+        font-size: 1rem;
+        margin: auto;
+        width: 10rem;
+        margin-top: 3rem;
+    }
+    .spanMot span{
+        margin : 0.5rem;
+        font-size: 0.9rem;
+    
+    }
+}
+
+/* desktop */
+@media  screen and (min-width: 1024px) {
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin: 1rem;
+    }
+    
+    .blocApp{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+    .spanMot {
+        display: flex;
+        justify-content: center;
+    }
+    .spanMot span{
+        margin : 0.5rem;
+        font-size: 1.5rem;
+    
+    }
+    .keyboard{
+        display: grid;
+        grid-template-columns: repeat(13, 1fr);
+        grid-gap: 1rem;
+        margin: 3rem;
+    }
+    
+    .keyboard button{
+        padding: 0.8rem;
+        font-size: 1rem;
+        border: 1px solid black;
+        border-radius: 5px;
+        background-color: #f0f0f0;
+        cursor: pointer;
+    }
+    
 }
