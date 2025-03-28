@@ -13,6 +13,7 @@ const Keyboard = ({alphabet, action }) => {
                         <button 
                             key={"letter_"+ key}
                             onClick={ ()=> action(letter)}
+
                             >{letter}
                         </button>
                     )
