@@ -5,7 +5,7 @@ const Keyboard = ({alphabet, action }) => {
     console.log(alphabet);
 
     return (
-        <div>
+        <div className="keyboard">
             {alphabet.map(
                 (letter, key) => {
                     // console.log(key + "=>" + letter)

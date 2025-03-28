@@ -3,6 +3,7 @@ import { useEffect } from "react";
 const Generateur = ({mot ,setMot, usedLetter}) => {
     
     // affichage du mot
+
     useEffect(() => {
         fetch("http://localhost:3333", {
             method: "POST",
@@ -18,8 +19,7 @@ const Generateur = ({mot ,setMot, usedLetter}) => {
 
     return (
         <div>
-            <h2>Le mot mystère est :</h2>
-            <p>{mot.length} lettres</p>
+            <p>Le mot est composé de {mot.length} lettres</p>
             <span className="spanMot">
                 {mot.split("").map((letter, index) => {
                     // si la lettre n'a pas été devinée afficher"_ ""

@@ -5,12 +5,84 @@
 }
 
 body {
+    font-family:monospace;
     justify-content: center;
     align-items: center;
+    color: #23508a;
+    background-color: #e6b0e6cf;
+    overflow:hidden;
+}
+/*confettis*/
+.dot{
+    width:7px;
+    height:12px;
+    position:absolute;
+    z-index:2;
+}
+html, body, #container {
+    width:100%; 
+    height:100%;
+}
+img{
+    left:50%;
+    top:50%;
+    position:absolute;
+}
 
+#DiacoDesignLink,#pens{
+    color: #fff;
+}
+
+
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin: 1rem;
+}
+
+.blocApp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid  #23508a;
+    border-radius: 5px;
 }
 .spanMot span{
     margin : 0.5rem;
     font-size: 1.5rem;
 
+}
+.keyboard{
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    grid-gap: 1rem;
+    margin: 3rem;
+}
+
+.keyboard button{
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+}
+
+#reload{
+    font-size: 1.2rem;
+    margin: 3rem;
+    border-radius: 15px;
+    padding: 0.5rem;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: rgb(35, 80, 138);
+
+}
+#reload:hover{
+    background-color:  rgb(35, 80, 138);
+    color:#e6b0e6cf;
 }
