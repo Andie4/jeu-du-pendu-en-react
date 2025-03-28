@@ -4,11 +4,13 @@
     box-sizing: border-box;
 }
 
+body {
+    justify-content: center;
+    align-items: center;
 
-input{
-    width: 2rem;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    
+}
+.spanMot span{
+    margin : 0.5rem;
+    font-size: 1.5rem;
+
 }

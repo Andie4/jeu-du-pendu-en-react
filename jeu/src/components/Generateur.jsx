@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
-const Generateur = ({mot ,setMot}) => {
+const Generateur = ({mot ,setMot, usedLetter}) => {
+    
     // affichage du mot
-
     useEffect(() => {
         fetch("http://localhost:3333", {
             method: "POST",
@@ -14,35 +14,27 @@ const Generateur = ({mot ,setMot}) => {
     
     // console.log(mot.length);
 
-
-
-    //création d'un iput pour chaque lettre
-    for (let i = 0; i < mot.length; i++) {
-        const input = document.createElement("input");
-        input.setAttribute("maxlength", "1");
-
-
-
-        // input.setAttribute("length", "1");
-        // input.setAttribute("size", "1");
-        // document.body.appendChild(input);
-
-        // console.log(mot[i]);
-    } 
+    
 
     return (
         <div>
             <h2>Le mot mystère est :</h2>
-            <p>{mot}</p>
-            <p>{mot.length}</p>
-            <span className="blocMot">
-                {mot.split("").map((letter, index) => (
-                    letter === "-" ? <span key={index}>-</span> :
-                <input key={index} maxLength="1"/>
-                ))}
+            <p>{mot.length} lettres</p>
+            <span className="spanMot">
+                {mot.split("").map((letter, index) => {
+                    // si la lettre n'a pas été devinée afficher"_ ""
+                    return letter === "-" ? (
+                        <span key={index}>-</span>
+                    ) : (
+                        <span key={index}>
+                            {usedLetter.includes(letter) ? letter : "_"}
+                        </span>
+                    );
+                })}
             </span>
+
         </div>
     );
 };
 
-export {Generateur};
+export default Generateur;
