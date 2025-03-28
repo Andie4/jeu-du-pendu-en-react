@@ -1,25 +1,25 @@
-import React from "react";
-import { useState } from "react";
-
-// import { Mot } from "./components/mot.jsx";
-// bizarre car sur les autres fichiers mon chemin est sesnsible à la casse lorsqu'il manque une majuscule mais pas ici pour mon "mot.jsx"
+import React, { useState } from "react";
+import Keyboard from "./components/Keyboard.jsx";
 import { Generateur } from "./components/Generateur.jsx";
-import { FindMot } from "./components/FindMot.jsx";
-
-
 
 function App() {
     const [mot, setMot] = useState("");
+    const alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+
+
+    const letterSelected = (letter) => {
+        console.log("lettre selectionné:"+letter )
+    }
 
     return (
         <div>
             <h1>Jeu du pendu</h1>
-            <Generateur mot={mot} setMot={setMot}/>
-            <FindMot/>
+            <Generateur mot={mot} setMot={setMot} />
+            <Keyboard 
+                alphabet={alphabet} 
+                action = {letterSelected}/>
         </div>  
-
     );
-};
+}
 
-
-export default App
+export default App;

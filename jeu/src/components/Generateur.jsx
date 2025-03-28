@@ -30,8 +30,6 @@ const Generateur = ({mot ,setMot}) => {
         // console.log(mot[i]);
     } 
 
-    const contientTiret = mot.includes("-");
-
     return (
         <div>
             <h2>Le mot mystère est :</h2>
